@@ -17,7 +17,7 @@ const PORT=process.env.PORT // process.env to read .env content (now the port va
 app.use(express.json()); //basically allows us to extract the json data from body @auth.controller.js
 app.use(cookieParser()); //allows us to parse a cookie
 app.use(cors({ //use curly braces, this shit is an object
-    origin: ["http://localhost:5173", `https://${process.env.IP}:5173`],
+    origin: "https://nitc-stream.vercel.app",
     credentials:true //allow the cookies or authorization headers to be sent with the request.
 }));
 
